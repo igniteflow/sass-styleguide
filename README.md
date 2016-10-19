@@ -1,4 +1,4 @@
-# SCSS Styleguide
+# SASS Styleguide Generator
 
 Recursively parses any `*.scss` files in your project.  Outputs a static html page displaying:
 
@@ -7,8 +7,8 @@ Recursively parses any `*.scss` files in your project.  Outputs a static html pa
 
 ## Installation
 
-`pip install scss-styleguide`
+`pip install sass-styleguide`
 
 ## Usage
 
-`styleguide`
+`sass-styleguide`
