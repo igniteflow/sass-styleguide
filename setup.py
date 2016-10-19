@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# build: python setup.py sdist bdist bdist_wheel upload -r pypi
 from setuptools import setup
 setup(
     name='sass-styleguide',
