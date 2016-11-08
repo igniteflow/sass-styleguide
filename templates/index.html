@@ -1,0 +1,83 @@
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab';
+            margin: 20px;
+        }
+
+        .container {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .container > div > div {
+            height: 100px;
+            width: auto;
+            border: 1px solid #626262;
+            margin: 3px;
+        }
+
+        .container > div > span {
+            margin: 3px;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>My SASS</h1>
+
+    <h2>Colours</h2>
+    <div class="container">
+        {% for name, value in variables.colors.iteritems() %}
+          <div>
+              <div style="background-color: {{value|replace("!default", "")}}"></div>
+              <span>{{name}}</span>
+          </div>
+        {% endfor %}
+    </div>
+
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+          <th>Variable name</th>
+          <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for name, value in variables.colors.iteritems() %}
+          <tr>
+            <td>{{name}}</td>
+            <td><code>{{value}}</code></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Other Variables</h2>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+          <th>Variable name</th>
+          <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for name, value in variables.other.iteritems() %}
+          <tr>
+            <td>{{name}}</td>
+            <td><code>{{value}}</code></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
