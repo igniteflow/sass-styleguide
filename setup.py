@@ -13,4 +13,7 @@ setup(
     scripts=[
         'bin/sass-styleguide'
     ],
+    install_requires=[
+        'Jinja2',
+    ],
 )
