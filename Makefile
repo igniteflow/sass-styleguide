@@ -5,4 +5,4 @@ release:
 	python setup.py sdist bdist bdist_wheel upload -r pypi
 
 clean:
-	rm -rf build dist sass_styleguide.egg-info MANIFEST .cache
+	rm -rf build dist sass_styleguide.egg-info MANIFEST .cache styleguide.html
